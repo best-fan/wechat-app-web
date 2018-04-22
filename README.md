@@ -26,31 +26,31 @@
    * phpinfo-daf1d88d91fb067884f6d8439b4ecbcb        ---服务器后台 文件
 ## 项目截图：
 ### 登录界面
-![界面](https://github.com/best-fan/wechat-app-zp/blob/master/screen/1.png)
+![界面](https://github.com/best-fan/wechat-app-web/blob/master/screen/1.jpg)
 ### 主界面
-![主界面](https://github.com/best-fan/wechat-app-zp/blob/master/screen/1.png)
+![主界面](https://github.com/best-fan/wechat-app-web/blob/master/screen/2.jpg)
 ### 用户管理
-![用户管理](https://github.com/best-fan/wechat-app-zp/blob/master/screen/1.png)
-### 主界面
-![修改信息](https://github.com/best-fan/wechat-app-zp/blob/master/screen/1.png)
-### 主界面
-![查看信息](https://github.com/best-fan/wechat-app-zp/blob/master/screen/1.png)
-### 主界面
-![信息管理](https://github.com/best-fan/wechat-app-zp/blob/master/screen/1.png)
-### 主界面
-![修改招聘信息](https://github.com/best-fan/wechat-app-zp/blob/master/screen/1.png)
-### 主界面
-![推荐管理](https://github.com/best-fan/wechat-app-zp/blob/master/screen/1.png)
-### 主界面
-![报名管理](https://github.com/best-fan/wechat-app-zp/blob/master/screen/1.png)
-### 主界面
-![发布招聘](https://github.com/best-fan/wechat-app-zp/blob/master/screen/1.png)
-### 主界面
-![轮播图修改](https://github.com/best-fan/wechat-app-zp/blob/master/screen/1.png)
-### 主界面
-![招聘信息管理员](https://github.com/best-fan/wechat-app-zp/blob/master/screen/1.png)
-### 主界面
-![无权限提示](https://github.com/best-fan/wechat-app-zp/blob/master/screen/1.png)
+![用户管理](https://github.com/best-fan/wechat-app-web/blob/master/screen/3.jpg)
+### 修改信息
+![修改信息](https://github.com/best-fan/wechat-app-web/blob/master/screen/4.jpg)
+### 查看信息
+![查看信息](https://github.com/best-fan/wechat-app-web/blob/master/screen/5.jpg)
+### 信息管理
+![信息管理](https://github.com/best-fan/wechat-app-web/blob/master/screen/6.jpg)
+### 修改招聘信息
+![修改招聘信息](https://github.com/best-fan/wechat-app-web/blob/master/screen/7.jpg)
+### 推荐管理
+![推荐管理](https://github.com/best-fan/wechat-app-web/blob/master/screen/8.jpg)
+### 报名管理
+![报名管理](https://github.com/best-fan/wechat-app-web/blob/master/screen/9.jpg)
+### 发布招聘
+![发布招聘](https://github.com/best-fan/wechat-app-web/blob/master/screen/10.jpg)
+### 轮播图修改
+![轮播图修改](https://github.com/best-fan/wechat-app-web/blob/master/screen/11.jpg)
+### 招聘信息管理员
+![招聘信息管理员](https://github.com/best-fan/wechat-app-web/blob/master/screen/12.jpg)
+### 无权限提示
+![无权限提示](https://github.com/best-fan/wechat-app-web/blob/master/screen/13.jpg)
 ## 使用说明：
 替换js文件中对应的Bmob.initialize("你的Application ID", "你的REST API Key");
      
