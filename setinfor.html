@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>修改招聘信息</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/layui.css" media="all">
+    <script src="res/js/bmob-min.js"></script>
+    <script src="layui.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="res/css/putinfor.css" media="all">
+    <script type="text/javascript" src="res/js/modules/setinfor.js"></script>
+    <!-- 注意：如果你直接复制所有代码到本地，上述css路径需要改成你本地的 -->
+</head>
+
+<body class="childrenBody">
+    <div id='body'>
+        <h1>修改招聘信息</h1>
+        <form class="layui-form layui-form-pane" id="myform" action="">
+            <div class="layui-form-item">
+                <label class="layui-form-label">公司名称</label>
+                <div class="layui-input-block">
+                    <input id="detName" type="text" name="title" autocomplete="off" lay-verify="comptitle" placeholder="请输入公司名称" class="layui-input" value=""></input>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">工作城市</label>
+                <div class="layui-input-inline">
+                    <input id="detAddr" type="text" name="username" lay-verify="workcity" placeholder="请输入工作城市" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item" pane="">
+                <label class="layui-form-label">工资类型</label>
+                <div class="layui-input-inline">
+                    <input id="payTypeZero" type="radio" lay-filter="radio" name="sex" value="0" title="月结">
+                    <input id="payTypeOne" type="radio" lay-filter="radio" name="sex" value="1" title="日结">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label">范围</label>
+                    <div class="layui-input-inline" style="width: 83px;">
+                        <input id="detPayMin" type="text" name="price_min" lay-verify="price_min" placeholder="￥" autocomplete="off" class="layui-input">
+                    </div>
+                    <div id="detPayM_M" class="layui-form-mid">-</div>
+                    <div class="layui-input-inline" style="width: 83px;">
+                        <input id="detPayMax" type="text" name="price_max" lay-verify="price_min" placeholder="￥" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label">已报名人数</label>
+                    <div class="layui-input-inline">
+                        <input id="entNum" type="text" name="number" lay-verify="number" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+            </div>
+            <div class="layui-upload-drag" style="height:150px;width:150px;border:1px #e6e6e6 solid;" id="test10">
+                <img style="height:100%;width: 100%;" class="layui-upload-img img-upload-view" id="detSrc" src="" />
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-upload">
+                    <button type="button" name="img_upload" class="layui-btn btn_upload_img">
+                        <i class="layui-icon">&#xe67c;</i>上传图片
+                    </button>
+                    <i id="tishi"><br>* 图片仅支持：jpg、png、gif、jpeg 图片地址会自动获取，请检查上传的文件名和上传后的文件名一致</i>
+                    <img class="layui-upload-img img-upload-view" src="upimg/demo.png">
+                    <p id="demoText"></p>
+                </div>
+            </div>
+            <div class="layui-form-item" style="margin-top: 30px;">
+                <label class="layui-form-label">公司图片</label>
+                <div class="layui-input-block">
+                    <input id="detSrcUrl" type="text" name="title" lay-verify="detSrcUrl" autocomplete="off" placeholder="请输入图片地址" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">公司介绍</label>
+                <div class="layui-input-block">
+                    <textarea id="detCompany" placeholder="请输入内容" name='detCompany' class="layui-textarea"></textarea>
+                </div>
+            </div>
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">薪资说明</label>
+                <div class="layui-input-block">
+                    <textarea id="payDescription" placeholder="请输入内容" name='payDescription' class="layui-textarea"></textarea>
+                </div>
+            </div>
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">招聘要求</label>
+                <div class="layui-input-block">
+                    <textarea id="recruitDescription" placeholder="请输入内容" name='recruitDescription' class="layui-textarea"></textarea>
+                </div>
+            </div>
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">食宿说明</label>
+                <div class="layui-input-block">
+                    <textarea id="boardDescription" placeholder="请输入内容" name='boardDescription' class="layui-textarea"></textarea>
+                </div>
+            </div>
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">温馨提示</label>
+                <div class="layui-input-block">
+                    <textarea id="kindlyReminder" placeholder="请输入内容" name='kindlyReminder' class="layui-textarea"></textarea>
+                </div>
+            </div>
+
+
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button class="layui-btn" lay-submit="" lay-filter="demo1">立即提交</button>
+                    <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+    <!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
+
+
+</body>
+
+</html>

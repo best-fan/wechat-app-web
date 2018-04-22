@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>推荐信息</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/layui.css" media="all">
+    <link rel="stylesheet" href="res/css/putinfor.css" media="all">
+    <script src="res/js/bmob-min.js"></script>
+    <script src="layui.js" charset="utf-8"></script>
+    <script type="text/javascript" src="res/js/modules/detrecominfor.js"></script>
+    <!-- 注意：如果你直接复制所有代码到本地，上述css路径需要改成你本地的 -->
+</head>
+
+<body class="childrenBody">
+    <div id='body'>
+        <h1>推荐信息</h1>
+        <form style="width:600px;margin-left:auto;margin-right:auto;" class="layui-form layui-form-pane" id="update-form" action="">
+
+            <div style="height:70px;" class="layui-form-item">
+                <label class="layui-form-label">用户名</label>
+                <div class="layui-input-block">
+                    <input id="userName" type="text" name="title" autocomplete="off" placeholder="请输入用户名" class="layui-input" disabled></input>
+                </div>
+            </div>
+            <div style="height:70px;" class="layui-form-item">
+                <label class="layui-form-label">手机号</label>
+                <div class="layui-input-block">
+                    <input id="userPhone" type="text" name="username" lay-verify="required" placeholder="请输入手机号" autocomplete="off" class="layui-input" disabled>
+                </div>
+            </div>
+
+            <div style="height:70px;" class="layui-form-item">
+                <label class="layui-form-label">推荐人</label>
+                <div class="layui-input-block">
+                    <input id="recoName" type="text" name="title" autocomplete="off" placeholder="请输入公司名称" class="layui-input" disabled></input>
+                </div>
+            </div>
+
+        </form>
+        <script>
+            layui.use(['form'], function() {
+                var form = layui.form;
+
+            });
+        </script>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>修改报名信息</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/layui.css" media="all">
+    <link rel="stylesheet" href="res/css/putinfor.css" media="all">
+    <script src="res/js/bmob-min.js"></script>
+    <script src="layui.js" charset="utf-8"></script>
+    <script type="text/javascript" src="res/js/modules/setjoininfor.js"></script>
+    <!-- 注意：如果你直接复制所有代码到本地，上述css路径需要改成你本地的 -->
+</head>
+
+<body class="childrenBody">
+    <div id='body'>
+        <h1>修改报名信息</h1>
+        <form style="width:600px;margin-left:auto;margin-right:auto;" class="layui-form layui-form-pane" id="myform" action="">
+
+            <div style="height:70px;" class="layui-form-item">
+                <label class="layui-form-label">用户名</label>
+                <div class="layui-input-block">
+                    <input id="userName" type="text" name="title" autocomplete="off" lay-verify="username" placeholder="请输入用户名" class="layui-input"></input>
+                </div>
+            </div>
+            <div style="height:70px;" class="layui-form-item">
+                <label class="layui-form-label">手机号</label>
+                <div class="layui-input-block">
+                    <input id="userPhone" type="text " lay-verify="required|phone" placeholder="请输入手机号" autocomplete="off " class="layui-input ">
+                </div>
+            </div>
+
+            <div style="height:70px;" class="layui-form-item">
+                <label class="layui-form-label">公司名称</label>
+                <div class="layui-input-block">
+                    <input id="myJoinName" type="text" name="title" autocomplete="off" lay-verify="myjoinname" placeholder="请输入公司名称" class="layui-input"></input>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button class="layui-btn" lay-submit="" lay-filter="demo1">立即提交</button>
+                    <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>轮播图修改</title>
+    <!-- carousel模块快速使用 -->
+    <link rel="stylesheet" href="css/layui.css" media="all">
+    <script src="res/js/bmob-min.js"></script>
+    <script src="layui.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="res/css/imgsrc.css" media="all" />
+</head>
+
+<body>
+    <h1>轮播图修改</h1>
+    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;">
+        <legend>图片一</legend>
+    </fieldset>
+    <div id="infor">
+        <div id="div_img">
+            <img id="img_1" src="">
+        </div>
+        <div class="layui-form-item" style="margin-top: 30px;">
+            <label class="layui-form-label">图片地址：</label>
+            <div class="layui-input-block">
+                <input type="text" id="putimg_1" lay-verify="detsrc" placeholder="轮播图链接1" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-input-block" id="btn">
+            <button class="layui-btn layui-btn-normal" onclick="putimg1()">更新链接</button>
+        </div>
+    </div>
+    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;">
+        <legend>图片二</legend>
+    </fieldset>
+    <div id="infor">
+        <div id="div_img">
+            <img id="img_2" src="">
+        </div>
+        <div class="layui-form-item" style="margin-top: 30px;">
+            <label class="layui-form-label">图片地址：</label>
+            <div class="layui-input-block">
+                <input type="text" id="putimg_2" lay-verify="detsrc" placeholder="轮播图链接2" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-input-block" id="btn">
+            <button class="layui-btn layui-btn-normal" onclick="putimg2()">更新链接</button>
+        </div>
+    </div>
+    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;">
+        <legend>图片三</legend>
+    </fieldset>
+    <div id="infor">
+        <div id="div_img">
+            <img id="img_3" src="">
+        </div>
+        <div class="layui-form-item" style="margin-top: 30px;">
+            <label class="layui-form-label">图片地址：</label>
+            <div class="layui-input-block">
+                <input type="text" id="putimg_3" lay-verify="detsrc" placeholder="轮播图链接3" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-input-block" id="btn">
+            <button class="layui-btn layui-btn-normal" onclick="putimg3()">更新链接</button>
+        </div>
+    </div>
+    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;">
+        <legend>上传图片</legend>
+    </fieldset>
+    <div class="layui-form-item">
+        <div class="layui-upload">
+            <button type="button" id="putbtn" name="img_upload" class="layui-btn btn_upload_img">
+                    <i class="layui-icon">&#xe67c;</i>上传图片
+                </button>
+            <i id="tishi"><br>* 图片仅支持：jpg、png、gif、jpeg 图片地址会自动获取，请检查上传的文件名和上传后的文件名一致</i>
+            <div id="pre_img">
+                <img class="layui-upload-img img-upload-view" src="upimg/demo.png">
+            </div>
+        </div>
+    </div>
+    <div class="layui-form-item" style="margin-top: 30px;">
+        <label class="layui-form-label">图片地址</label>
+        <div class="layui-input-block">
+            <input type="text" id="upSrc" placeholder="上传图片自动获取链接地址" class="layui-input">
+        </div>
+    </div>
+
+    <!-- 条目中可以是任意内容，如：<img src=""> -->
+
+
+
+
+    <script type="text/javascript" src="res/js/modules/imgsrc.js"></script>
+</body>
+
+</html>

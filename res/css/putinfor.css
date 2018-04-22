@@ -1,0 +1,32 @@
+#body {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.layui-upload img {
+    display: block;
+    width: 300px;
+    height: 300px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#tishi {
+    color: blue;
+}
+
+#myform {
+    margin-left: 28px;
+}
+
+h1 {
+    height: 100px;
+    line-height: 100px;
+}

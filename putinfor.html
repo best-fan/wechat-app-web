@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>发布招聘信息</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/layui.css" media="all">
+    <script src="res/js/bmob-min.js"></script>
+    <script src="layui.js" charset="utf-8"></script>
+    <!-- <script src="layui.all.js"></script> -->
+    <!-- layui 弹窗判断 先引入 layui 后 引入 layui.all -->
+    <!-- 注意：如果你直接复制所有代码到本地，上述css路径需要改成你本地的 -->
+</head>
+
+<body class="childrenBody">
+    <div id='body'>
+        <h1>发布招聘信息</h1>
+        <form class="layui-form layui-form-pane" id='myform' action="">
+            <div class="layui-form-item">
+                <label class="layui-form-label">公司名称</label>
+                <div class="layui-input-block">
+                    <input type="text" id="detName" name="comptitle" autocomplete="off" lay-verify="comptitle" placeholder="公司名称" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">工作城市</label>
+                <div class="layui-input-inline">
+                    <input type="text" id="detAddr" name="workcity" placeholder="请输入工作城市" lay-verify="workcity" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item" pane="">
+                <label class="layui-form-label">工资类型</label>
+                <div class="layui-input-block">
+                    <input type="radio" lay-filter="radio" name="paytype" value="0" title="月结" checked="">
+                    <input type="radio" lay-filter="radio" name="paytype" value="1" title="日结">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label">范围</label>
+                    <div class="layui-input-inline" style="width: 100px;">
+                        <input type="text" id="detPayMin" lay-verify="price_min" placeholder="￥" autocomplete="off" class="layui-input">
+                    </div>
+                    <div id='fw' class="layui-form-mid">-</div>
+                    <div class="layui-input-inline" style="width: 100px;">
+                        <input type="text" id="detPayMax" lay-verify="price_min" placeholder="￥" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label">已报名人数</label>
+                    <div class="layui-input-inline">
+                        <input type="text" id="entNum" name="number" lay-verify="number" autocomplete="off" value="0" class="layui-input">
+                    </div>
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <div class="layui-upload">
+                    <button type="button" name="img_upload" class="layui-btn btn_upload_img">
+                        <i class="layui-icon">&#xe67c;</i>上传图片
+                    </button>
+                    <i id="tishi"><br>* 图片仅支持：jpg、png、gif、jpeg ,图片地址会自动获取，请检查上传的文件名和上传后的文件名一致</i>
+                    <img class="layui-upload-img img-upload-view" src="upimg/demo.png">
+                    <p id="demoText"></p>
+                </div>
+            </div>
+
+            <div class="layui-form-item" style="margin-top: 30px;">
+                <label class="layui-form-label">公司图片</label>
+                <div class="layui-input-block">
+                    <input type="text" id="detSrc" lay-verify="detsrc" placeholder="上传图片自动获取地址" disabled="disabled" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">公司介绍</label>
+                <div class="layui-input-block">
+                    <textarea placeholder="请输入内容" id="detCompany" name='detCompany' class="layui-textarea"></textarea>
+                </div>
+            </div>
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">薪资说明</label>
+                <div class="layui-input-block">
+                    <textarea placeholder="请输入内容" id="payDescription" name='payDescription' class="layui-textarea"></textarea>
+                </div>
+            </div>
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">招聘要求</label>
+                <div class="layui-input-block">
+                    <textarea placeholder="请输入内容" id="recruitDescription" name='recruitDescription' class="layui-textarea"></textarea>
+                </div>
+            </div>
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">食宿说明</label>
+                <div class="layui-input-block">
+                    <textarea placeholder="请输入内容" id="boardDescription" name='boardDescription' class="layui-textarea"></textarea>
+                </div>
+            </div>
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">温馨提示</label>
+                <div class="layui-input-block">
+                    <textarea placeholder="请输入内容" id="kindlyReminder" name='kindlyReminder' class="layui-textarea"></textarea>
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button class="layui-btn" lay-submit="" lay-filter="demo1">立即提交</button>
+                    <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                </div>
+            </div>
+        </form>
+
+
+
+        <!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
+
+        <script type="text/javascript" src="res/js/modules/putinfor.js"></script>
+        <link rel="stylesheet" href="res/css/putinfor.css" media="all">
+
+</body>
+
+</html>
